@@ -1,4 +1,4 @@
-import { Controller, Get, Module } from "@nestjs/common";
+import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
 
 //newspaper class wrapping a jerry

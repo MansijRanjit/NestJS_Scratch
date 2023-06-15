@@ -1,8 +1,8 @@
-import { Controller, Get, Module } from "@nestjs/common";
+import { Controller, Get } from "@nestjs/common";
 
-@Controller() //decorator
+@Controller("/app") //decorator
 export class AppController {
-  //controller ko euta function
+  //controller ko euta class
 
   @Get() //decorator
   getRootRoute() {
@@ -10,6 +10,7 @@ export class AppController {
       name: "Mansij Ranjit",
       dob: "31/7/2001",
       contact: "9840253456",
+      gender: "Male",
       address: {
         province: "Bagmati",
         street: "Kalanki",
@@ -20,7 +21,12 @@ export class AppController {
   @Get("/food")
   getMyFavouriteFood() {
     return {
-      food: ["pizza", "momo"],
+      food: ["pizza", "momo", "chowmein"],
     };
+  }
+
+  @Get("/bye")
+  getByeThere() {
+    return "bye there";
   }
 }
